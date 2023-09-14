@@ -332,6 +332,8 @@ proc parseGraphTweet(js: JsonNode; isLegacy=false): Tweet =
     jsCard["binding_values"] = values
 
   result = parseTweet(js{"legacy"}, jsCard)
+  if result.isNil:
+    return Tweet()
   result.id = js{"rest_id"}.getId
   result.user = parseGraphUser(js{"core"})
 
