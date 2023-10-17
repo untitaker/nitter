@@ -252,6 +252,7 @@ proc expandTextEntities(tweet: Tweet; entities: JsonNode; text: string; textSlic
       replacements.extractUrls(u, textSlice.b, hideTwitter = hasQuote)
 
       if hasCard and u{"url"}.getStr == get(tweet.card).url:
+        echo "nitter-tco-link: ", u{"url"}, " -> ", u{"expanded_url"}
         get(tweet.card).url = u{"expanded_url"}.getStr
 
   with media, entities{"media"}:

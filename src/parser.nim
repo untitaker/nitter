@@ -190,6 +190,7 @@ proc parseCard(js: JsonNode; urls: JsonNode): Card =
 
   for u in ? urls:
     if u{"url"}.getStr == result.url:
+      echo "nitter-tco-link: ", u{"url"}, " -> ", u{"expanded_url"}
       result.url = u{"expanded_url"}.getStr
       break
 
