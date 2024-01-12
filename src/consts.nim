@@ -9,7 +9,6 @@ const
   activate* = $(api / "1.1/guest/activate.json")
 
   photoRail* = api / "1.1/statuses/media_timeline.json"
-  userSearch* = api / "1.1/users/search.json"
 
   graphql = api / "graphql"
   graphUser* = graphql / "u7wQyGi6oExe8_TRWGMq4Q/UserResultByScreenNameQuery"
@@ -30,12 +29,10 @@ const
     "include_cards": "1",
     "include_entities": "1",
     "include_profile_interstitial_type": "0",
-    "include_quote_count": "1",
-    "include_reply_count": "1",
-    "include_user_entities": "1",
-    "include_ext_reply_count": "1",
-    "include_ext_is_blue_verified": "1",
-    #"include_ext_verified_type": "1",
+    "include_quote_count": "0",
+    "include_reply_count": "0",
+    "include_user_entities": "0",
+    "include_ext_reply_count": "0",
     "include_ext_media_color": "0",
     "cards_platform": "Web-13",
     "tweet_mode": "extended",
